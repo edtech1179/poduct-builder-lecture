@@ -16,6 +16,30 @@
       </header>
       
       <div id="lotto-numbers"></div>
+
+      <section class="contact-form-section">
+        <hr>
+        <h2>제휴 문의</h2>
+        <form action="https://formspree.io/f/mnjjqnnr" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">성함</label>
+            <input type="text" id="name" name="name" required placeholder="성함을 입력해주세요">
+          </div>
+          <div class="form-group">
+            <label for="email">이메일 주소</label>
+            <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label for="company">회사/조직명</label>
+            <input type="text" id="company" name="company" placeholder="회사 또는 조직명을 입력해주세요">
+          </div>
+          <div class="form-group">
+            <label for="message">문의 내용</label>
+            <textarea id="message" name="message" required placeholder="제휴 문의 내용을 입력해주세요" rows="5"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">문의 보내기</button>
+        </form>
+      </section>
     </div>
 
     <!-- Firebase SDKs (keeping them just in case, though not strictly used by the lotto logic yet) -->
