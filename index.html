@@ -12,34 +12,40 @@
   <body>
     <div class="container">
       <header>
-        <h1>Lotto Number Generator</h1>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">
-          Toggle Dark Mode
-        </button>
+        <div class="header-controls">
+          <select id="language-selector" aria-label="Select Language">
+            <option value="ko">한국어</option>
+            <option value="en">English</option>
+          </select>
+          <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            Toggle Dark Mode
+          </button>
+        </div>
+        <h1 data-i18n="appTitle">Lotto Number Generator</h1>
       </header>
       
       <div id="lotto-numbers"></div>
       
       <div class="controls">
-        <button id="generate-btn" class="action-btn">번호 생성하기 (Generate)</button>
+        <button id="generate-btn" class="action-btn" data-i18n="generateBtn">번호 생성하기 (Generate)</button>
       </div>
 
       <article class="content-section">
-        <h2>로또 번호 생성기란? (About)</h2>
-        <p>
+        <h2 data-i18n="aboutTitle">로또 번호 생성기란? (About)</h2>
+        <p data-i18n="aboutContent">
           본 서비스는 1부터 45까지의 숫자 중 6개를 무작위로 추첨하여 로또 예상 번호를 제공하는 무료 도구입니다. 
           매주 행운을 시험해보고 싶은 분들을 위해 복잡한 절차 없이 클릭 한 번으로 번호를 생성할 수 있도록 제작되었습니다.
         </p>
         
-        <h2>사용 방법 (How to Use)</h2>
-        <p>
+        <h2 data-i18n="howToTitle">사용 방법 (How to Use)</h2>
+        <p data-i18n="howToContent">
           1. 상단의 '번호 생성하기' 버튼을 클릭하세요.<br>
           2. 화면에 나타나는 6개의 색상별 공을 확인하세요.<br>
           3. 마음에 들지 않으면 다시 버튼을 눌러 새로운 번호를 받을 수 있습니다.
         </p>
 
-        <h2>로또 6/45 확률 정보</h2>
-        <p>
+        <h2 data-i18n="infoTitle">로또 6/45 확률 정보</h2>
+        <p data-i18n="infoContent">
           로또 6/45의 1등 당첨 확률은 약 814만 분의 1입니다. 
           이 생성기는 순수하게 수학적 무작위성(Randomness)을 기반으로 동작하며, 
           당첨을 보장하지 않습니다. 로또는 소액으로 건전하게 즐기는 것이 좋습니다.
@@ -48,25 +54,25 @@
 
       <section class="contact-form-section">
         <hr>
-        <h2>제휴 문의</h2>
+        <h2 data-i18n="contactTitle">제휴 문의</h2>
         <form action="https://formspree.io/f/mnjjqnnr" method="POST" class="contact-form">
           <div class="form-group">
-            <label for="name">성함</label>
-            <input type="text" id="name" name="name" required placeholder="성함을 입력해주세요">
+            <label for="name" data-i18n="labelName">성함</label>
+            <input type="text" id="name" name="name" required placeholder="Name">
           </div>
           <div class="form-group">
-            <label for="email">이메일 주소</label>
+            <label for="email" data-i18n="labelEmail">이메일 주소</label>
             <input type="email" id="email" name="_replyto" required placeholder="example@email.com">
           </div>
           <div class="form-group">
-            <label for="company">회사/조직명</label>
-            <input type="text" id="company" name="company" placeholder="회사 또는 조직명을 입력해주세요">
+            <label for="company" data-i18n="labelCompany">회사/조직명</label>
+            <input type="text" id="company" name="company" placeholder="Company Name">
           </div>
           <div class="form-group">
-            <label for="message">문의 내용</label>
-            <textarea id="message" name="message" required placeholder="제휴 문의 내용을 입력해주세요" rows="5"></textarea>
+            <label for="message" data-i18n="labelMessage">문의 내용</label>
+            <textarea id="message" name="message" required placeholder="Message" rows="5"></textarea>
           </div>
-          <button type="submit" class="submit-btn">문의 보내기</button>
+          <button type="submit" class="submit-btn" data-i18n="sendBtn">문의 보내기</button>
         </form>
       </section>
 
@@ -97,8 +103,8 @@
         <hr>
         <p>&copy; 2026 Lotto Number Generator. All rights reserved.</p>
         <nav>
-          <a href="privacy.html">개인정보처리방침 (Privacy Policy)</a> | 
-          <a href="terms.html">이용약관 (Terms of Service)</a>
+          <a href="privacy.html" data-i18n="privacyPolicy">개인정보처리방침 (Privacy Policy)</a> | 
+          <a href="terms.html" data-i18n="termsOfService">이용약관 (Terms of Service)</a>
         </nav>
       </footer>
     </div>

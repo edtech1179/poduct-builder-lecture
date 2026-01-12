@@ -41,6 +41,22 @@ h1 {
   margin: 0 0 20px;
 }
 
+.header-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#language-selector {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--btn-bg);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
 #theme-toggle {
   padding: 10px 20px;
   border: none;
