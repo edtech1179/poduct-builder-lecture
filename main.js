@@ -77,8 +77,11 @@ function displayLottoNumbers() {
 // Initial generation on page load
 displayLottoNumbers();
 
-// A-uto-generate new numbers every 3 seconds
-setInterval(displayLottoNumbers, 3000);
+// Button Event Listener
+const generateBtn = document.getElementById('generate-btn');
+if (generateBtn) {
+  generateBtn.addEventListener('click', displayLottoNumbers);
+}
 
 
 // Theme Switcher Logic
