@@ -51,8 +51,6 @@ class LottoBall extends HTMLElement {
 }
 customElements.define('lotto-ball', LottoBall);
 
-
-const generateBtn = document.getElementById('generate-btn');
 const lottoNumbersContainer = document.getElementById('lotto-numbers');
 
 function generateLottoNumbers() {
@@ -76,7 +74,33 @@ function displayLottoNumbers() {
   });
 }
 
-generateBtn.addEventListener('click', displayLottoNumbers);
-
 // Initial generation on page load
 displayLottoNumbers();
+
+// A-uto-generate new numbers every 3 seconds
+setInterval(displayLottoNumbers, 3000);
+
+
+// Theme Switcher Logic
+const themeToggleBtn = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check for saved theme preference
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+  body.setAttribute('data-theme', currentTheme);
+  updateButtonText(currentTheme);
+}
+
+themeToggleBtn.addEventListener('click', () => {
+  const isDark = body.getAttribute('data-theme') === 'dark';
+  const newTheme = isDark ? 'light' : 'dark';
+  
+  body.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+  updateButtonText(newTheme);
+});
+
+function updateButtonText(theme) {
+  themeToggleBtn.textContent = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode';
+}
